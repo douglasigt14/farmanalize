@@ -14,8 +14,12 @@ use App\Utils\ApplicationVersion;
 |
 */
 
+Route::get('/login', function () {
+    return "Não autorizado";
+})->name('login');
+
 Route::get('/', function () {
     $version = ApplicationVersion::get();
 
-    return "Farm Analize {$version}";
+    return "Api Farm Analize {$version}";
 });
